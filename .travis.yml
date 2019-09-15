@@ -1,0 +1,12 @@
+language: haskell
+
+services:
+  - docker
+
+before_install:
+- docker ps
+
+script:
+- whoami
+- pwd
+- docker build -t gitchapter
