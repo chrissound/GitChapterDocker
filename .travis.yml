@@ -9,4 +9,4 @@ before_install:
 script:
 - whoami
 - pwd
-- docker build -t gitchapter
+- docker build -t gitchapter .
