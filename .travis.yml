@@ -9,7 +9,9 @@ script:
 # Add gcloud to $PATH
 - source /home/travis/google-cloud-sdk/path.bash.inc
 - gcloud version
-- docker build -t gitchapter .
+- docker pull debian:buster-slim
+- docker tag debian:buster-slim us.gcr.io/objit-chris/chris-test:v1
+- docker push us.gcr.io/objit-chris/chris-test:v1
 cache:
   directories:
     - "$HOME/google-cloud-sdk/"
