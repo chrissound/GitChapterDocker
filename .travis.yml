@@ -12,7 +12,7 @@ script:
 - docker pull debian:buster-slim
 - docker tag debian:buster-slim us.gcr.io/objit-chris/chris-test:v1
 - echo "$GC_JSON" | base64 --decode > key.json
-- gcloud activate-service-account --key-file=key.json
+- gcloud auth activate-service-account --key-file=key.json
 - docker push us.gcr.io/objit-chris/chris-test:v1
 cache:
   directories:
