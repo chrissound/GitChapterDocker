@@ -32,4 +32,6 @@ WORKDIR /GitChapter
 RUN /usr/local/bin/stack config set system-ghc --global false
 RUN  /usr/local/bin/stack config set install-ghc --global true
 
+RUN apt install -y libpcre3 libpcre3–dev
+
 RUN stack build --no-nix 
